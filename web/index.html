@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/jumbotron-narrow.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <script src="js/GlobalVariables.js"></script>
+        <script src="js/EN_Variables.js"></script>
+        <script src="js/jquery.js"></script>
+        <script src="js/cutcake.js"></script>
+        
+        <title>CutCake</title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="image/x-icon" href="img/glyphicons-273-cake.png" />
+        
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-61253093-2', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </head>
+            
+    <body>
+        <script>if(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)){
+            window.location ="http://m.cutcake.net";}
+        </script>
+        <div class="container">
+            <div class="header">
+                
+                <div class="flag_div">
+                    <img class="flag" src ="img/United-Kingdom-icon.png" alt="English"/>
+                    <a href="es/index.html"><img class="flag" src ="img/Spain-icon.png" alt="Español"/></a>
+                </div>
+            
+                <nav>
+                    <ul class="nav nav-pills pull-right nav_margin">
+                    <li role="presentation" class="active"><a href="#">Home</a></li>
+                    <li role="presentation"><a href="#openModal">About</a></li>
+                    </ul>
+                </nav>
+            
+                <div class="text-muted logo_div">
+                    <img src="img/cakeLogo.jpg" alt="CutCake Logo" class="logo_size"/>
+                    <img src="img/cakeWLogo.png" alt="CutCake Logo"/> 
+                </div>
+            </div>
+			
+            <div class="jumbotron">
+                 <p class="lead">
+                    <img src="img/glyphicons-31-pencil.png" alt="Edit Name" class="pencil_icon"/> Enter person's name and their spending
+                </p>
+       
+                <div class="form-inline" id="p_row" style="display: none;">
+                    <label class="sr-only">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Name">
+                    <div class="form-group">
+                        <label class="sr-only">Amount</label>
+                        <div class="input-group">
+                          <div class="input-group-addon">$</div>
+                          <input type="number" min="0" class="form-control" id="amount" placeholder="Amount">
+                        </div>
+                    </div> 
+                    
+                    <button id="remove_btn" type="button" onclick="delRow(this)" class="remove_buttom" disabled>
+                        <img id='remove_img' SRC='img/glyphicons-17-bin.png' alt="Remove" class="remove_icon">
+                    </button>    
+                </div>
+
+                <script>
+                    addField();
+                    addField();
+                </script>
+
+                <div class="form-inline">
+                    <br>
+                    <button type="button" class="btn btn-info" onclick="sumAmount()">
+                        <img src="img/glyphicons-324-calculator.png" class="calculate_icon" alt="Calculate">  Calculate
+                    </button>   
+                     <button type="button" class="btn btn-warning" onclick="addField()">
+                        <img src="img/glyphicons-191-circle-plus.png" class="addPerson_icon" alt="Calculate">  Add Person
+                    </button>  
+               
+                </div>  
+           </div>
+           
+            <div class="jumbotron" style="display: none;" id="result"></div>
+            
+            <div class="jumbotron" style="display: none;" id="div_error"></div>
+            
+            <div class="footer mail_link">
+                <p>©2015. CutCake. <a href="mailto:iriartesantiago@gmail.com">Santiago Iriarte.</a></p>
+            </div>
+        </div>
+    
+        <div id="openModal" class="modalDialog">
+            <div>
+                <a href="#close" title="Close" class="close">x</a>
+                <h3 class="text-muted">
+                    <img src="img/cakeLogo.jpg" class="logo_size" alt="CutCake Logo"/>
+                    <img src="img/cakeWLogo.png" alt="CutCake Logo"/> 
+                </h3>
+                <div>
+                    <p class="openModel_text_tittle">It's a simple application that allow you to:</p>
+                    <p class="openModel_text"><img src="img/glyphicons-228-usd.png" alt="" class="mini_icon">Divide an event's cost equally between the people who participed and spent money in it.</p>
+                    <p class="openModel_text"><img src="img/glyphicons-43-pie-chart.png" alt="" class="mini_icon">Provides alternative ways for distribute the money expended between those people.</p>
+                    <p class="openModel_text_tittle">And do it:</p>
+                    <p class="openModel_text"><img src="img/glyphicons-2-leaf.png" alt="" class="mini_icon">Really simple.<p>
+                    <p class="openModel_text"><img src="img/glyphicons-161-imac.png" alt="" class="mini_icon">For multiples platforms (Web and Mobile).</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
